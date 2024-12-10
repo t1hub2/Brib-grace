@@ -34,7 +34,7 @@ local Window = Rayfield:CreateWindow({
 })
 local Tab = Window:CreateTab("Читы",4483362458)
 local Button = Tab:CreateButton({
-   Name = "Button Example",
+   Name = "Авто Рычаги",
    Callback = function()
     workspace.DescendantAdded:Connect(function(descendant)
 if descendant.Name == "base" and descendant:IsA("BasePart") then

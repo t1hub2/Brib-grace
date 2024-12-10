@@ -46,9 +46,3 @@ Title = "Рычаги врублены",
 Text = "Дверь открыта",
 Duration = 3
    end,
-})
-
-                  ("SendNotification", { -- cosmetic
-Title = "Т1 хаб загружен",
-Text = "что здесь писать",
-Duration = 3

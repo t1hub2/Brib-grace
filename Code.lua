@@ -32,3 +32,22 @@ local Window = Rayfield:CreateWindow({
       Key = {"Hello"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
    }
 })
+local Tab = Window:CreateTab("Читы",4483362458)
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+    workspace.DescendantAdded:Connect(function(descendant)
+if descendant.Name == "base" and descendant:IsA("BasePart") then
+local player = game.Players.LocalPlayer
+if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+descendant.Position = player.Character.HumanoidRootPart.Position
+game.StarterGui:SetCore("SendNotification", { -- cosmetic
+Title = "Рычаги врублены",
+Text = "Дверь открыта",
+Duration = 3
+})
+end
+end
+end)
+   end,
+})
